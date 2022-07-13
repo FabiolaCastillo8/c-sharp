@@ -6,6 +6,7 @@ public class Producto
 
     public int Existencia { get; set; }
 
+
     public Producto(string codigo, string descripcion, int existencia)
     {
         Codigo = codigo;

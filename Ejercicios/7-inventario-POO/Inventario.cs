@@ -53,6 +53,7 @@ public class Inventario
     }
 }
 
+
         public void ingresoDeInventario() {
             string codigo = "";
             string cantidad = "";
