@@ -183,7 +183,7 @@ public class DatosdePrueba
       Console.WriteLine("| Cliente | Vendedor |");
       Console.WriteLine("====================");
       Console.WriteLine("");
-
+      
       foreach (var orden in ListaOrdenes)
       {
          Console.WriteLine(orden.Codigo + " | " + orden.Fecha+ " | " + orden.Subtotal + " | " + orden.Impuesto + " | " + orden.Total);
