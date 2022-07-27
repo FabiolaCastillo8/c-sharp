@@ -23,6 +23,7 @@ namespace inventario
                 Console.WriteLine("0 - Salir");
                 opcion = Console.ReadLine();
 
+
                 switch (opcion)
                 {
                     case "1": 

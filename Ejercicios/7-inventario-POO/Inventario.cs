@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public class Inventario
 {
     public List<Producto> ListadeProductos { get; set; }
-
     public Inventario()
+
     {
         ListadeProductos = new List<Producto>();
 
@@ -20,8 +20,6 @@ public class Inventario
         ListadeProductos.Add(c);
         ListadeProductos.Add(d);
         ListadeProductos.Add(e);
-
-
     }
 
     public void listarProductos() {
@@ -39,7 +37,7 @@ public class Inventario
     Console.ReadLine();
 }
 
-        private  void movimientoInventario(string codigo, int cantidad, string tipoMovimiento) {
+    private  void movimientoInventario(string codigo, int cantidad, string tipoMovimiento) {
     
     foreach (var producto in ListadeProductos)
     {
