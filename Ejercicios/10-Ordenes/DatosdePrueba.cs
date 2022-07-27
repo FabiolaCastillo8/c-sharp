@@ -156,6 +156,7 @@ public class DatosdePrueba
          } else {
             Console.WriteLine("Producto agregado: " + producto.Descripcion + " con precio de: " + producto.Precio);
             nuevaOrden.AgregarProducto(producto);
+
          }
 
          Console.WriteLine("Desea continuar? s/n");
@@ -164,31 +165,35 @@ public class DatosdePrueba
          break; 
       }
    }
-      Console.WriteLine("");
-      Console.WriteLine("Total de la orden es de: " + nuevaOrden.Total);
-      Console.ReadLine();
-   }
+        Console.WriteLine("");
+        Console.WriteLine("Total de la orden es de: " + nuevaOrden.Total);
+        Console.ReadLine();
+}
    
    public void ListarOrdenes()
    {
       Console.Clear();
-      Console.WriteLine("Lista de Ordenes");
-      Console.WriteLine("================");
+      Console.WriteLine("1 - Lista de Ordenes");
+      Console.WriteLine("====================");
       Console.WriteLine("");
-      Console.WriteLine("Codigo | Fecha | Total");
-      Console.WriteLine("Cliente | Vendedor");
-      Console.WriteLine("================");
+      Console.WriteLine("| Codigo | Fecha |");
+      Console.WriteLine("");
+      Console.WriteLine("| Subtotal | Impuesto | Total |");
+      Console.WriteLine("");
+      Console.WriteLine("| Cliente | Vendedor |");
+      Console.WriteLine("====================");
       Console.WriteLine("");
 
       foreach (var orden in ListaOrdenes)
       {
-         Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Total);
+         Console.WriteLine(orden.Codigo + " | " + orden.Fecha+ " | " + orden.Subtotal + " | " + orden.Impuesto + " | " + orden.Total);
          Console.WriteLine(orden.Cliente.Nombre + " | " + orden.Vendedor.Nombre);
-         
+
          foreach (var detalle in orden.ListaOrdenDetalle)
          {
             Console.WriteLine("     " + detalle.Producto.Descripcion + " | "+ detalle.Cantidad + " | " + detalle.Precio); 
          }
+         Console.WriteLine();
       }
       
       Console.ReadLine();
