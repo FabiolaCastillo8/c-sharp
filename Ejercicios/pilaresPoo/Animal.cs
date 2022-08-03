@@ -4,6 +4,7 @@ namespace pilaresPoo
 {
    public class Animal
    {
+   
    protected string Nombre;
 
    public string _Nombre { get => Nombre; set => Nombre = value; }
